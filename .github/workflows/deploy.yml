@@ -35,5 +35,5 @@ jobs:
       - name: Update Lambda Function
         run: |
           aws lambda update-function-code \
-            --function-name MyS3DemoLambda \
+            --function-name MyLambdaS3Role \
             --image-uri ${{ steps.login-ecr.outputs.registry }}/my-lambda-repo:latest
