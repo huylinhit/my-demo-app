@@ -3,11 +3,10 @@ import boto3
 import os
 
 def handler(event, context):
-    # Lấy tên bucket từ Environment Variable cấu hình trên AWS Lambda
-    bucket_name = os.environ.get('S3_BUCKET_NAME', 'my-demo-bucket')
     s3 = boto3.client('s3')
     
     try:
+        bucket_name = os.environ['S3_BUCKET_NAME']
         # Demo: Liệt kê các file trong S3
         response = s3.list_objects_v2(Bucket=bucket_name)
         file_names = [obj['Key'] for obj in response.get('Contents', [])]
