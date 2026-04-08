@@ -1,0 +1,28 @@
+# --- Secrets & Environment Variables ---
+.env
+.env.*
+# Không bao giờ push các file chứa Access Key/Secret Key
+credentials
+*.pem
+
+# --- Python ---
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.python-version
+
+.docker/
+*.log
+
+.DS_Store
+.vscode/
+.idea/
+Thumbs.db
+
+dist/
+build/
+*.egg-info/
