@@ -14,9 +14,9 @@ def handler(event, context):
         return {
             'statusCode': 200,
             'body': json.dumps({
-                'status': 'Success',
-                'version': '2.0',  
-                'files_count': len(file_names),
+                'status': 'Deployment Successful',
+                'env': 'Production',
+                'message': 'Goi tu Postman thanh cong!',
                 'files': file_names
             })
         }
