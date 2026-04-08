@@ -15,7 +15,7 @@ def handler(event, context):
             'statusCode': 200,
             'body': json.dumps({
                 'status': 'Success',
-                'version': '2.0',  # Thay đổi version này để check CI/CD
+                'version': '2.0',  
                 'files_count': len(file_names),
                 'files': file_names
             })
